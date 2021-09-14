@@ -59,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 textViewTimer.setText(getTime(millisUntilFinished));
                 if (millisUntilFinished <= 6000) {
-                    textViewTimer.setTextColor(Color.parseColor("#FD0006"));
+                    textViewTimer.setTextColor(Color.parseColor("#fd0006"));
                 }
             }
 
@@ -95,6 +95,7 @@ public class MainActivity extends AppCompatActivity {
                 timer.cancel();
                 timer.start();
                 Toast.makeText(this, "Верно", Toast.LENGTH_SHORT).show();
+                textViewTimer.setTextColor(Color.parseColor("#41A128"));
             } else {
                 Toast.makeText(this, "Неверно", Toast.LENGTH_SHORT).show();
             }
